@@ -8,5 +8,6 @@ export const routes: Routes = [
   { path: 'giochi', component: ListaGiochiComponent },
   { path: 'gioco/:id', component: DettaglioGiocoComponent },
   { path: 'prenota/:id', component: FormPrenotazioneComponent },
+  //fallback
   { path: '**', redirectTo: '/giochi' }
 ];

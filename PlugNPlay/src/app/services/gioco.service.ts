@@ -8,13 +8,13 @@ export class GiocoService {
   private giochi: Gioco[] = [
     {
       id: 1,
-      titolo: 'God of War Ragnarök',
-      descrizione: 'Gioco d\'azione e avventura mitologico',
-      genere: 'Azione',
-      dataRilascio: new Date('2022-11-09'),
-      prezzo: 69.99,
-      disponibile: true,
-      imgCopertina: 'assets/gow.jpg'
+      titolo: "Baldur's Gate 3",
+      descrizione: 'Basato sul mondo di D&D, immersivo ed immenso, vincitore GOTY 2023',
+      genere: 'RPG',
+      dataRilascio: new Date('2023-08-03'),
+      prezzo: 59.99,
+      disponibile: true, 
+      imgCopertina: 'assets/bg3.jpg'
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export class GiocoService {
     {
       id: 3,
       titolo: 'Celeste',
-      descrizione: 'Platform game con una profonda storia personale',
+      descrizione: 'Platformer di precisione con una profonda storia personale',
       genere: 'Platformer',
       dataRilascio: new Date('2018-01-25'),
       prezzo: 19.99,

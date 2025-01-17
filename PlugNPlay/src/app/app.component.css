@@ -1,0 +1,35 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #6e94ff;
+  cursor: pointer;
+  font-size: 3em;
+  text-decoration: line-through #8940ff 4px;
+  text-shadow: 0px 4px 0 #8940ff
+}
+
+.nav-links a {
+  color: #6e94ff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: #f0e6ff;
+}

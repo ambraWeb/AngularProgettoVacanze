@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 
+// service che gestisce la logica di prenotazioni e acquisti
+// usa localStorage per i dati
+
 interface Prenotazione {
   id: number;
   giocoId: number;
   data: Date;
-  statoPrenotazione: 'In attesa' | 'Confermata';
+  statoPrenotazione: 'In attesa' | 'Confermata' | 'Completata';
 }
 
 interface Acquisto {
@@ -18,11 +21,12 @@ interface Acquisto {
   providedIn: 'root'
 })
 export class PrenotazioneService {
+  // chiavi per salvare i dati nel localStorage
   private readonly PRENOTAZIONI_KEY = 'prenotazioni';
   private readonly ACQUISTI_KEY = 'acquisti';
 
   constructor() {
-    // Inizializza localStorage se vuoto
+    // inizializza localStorage se vuoto
     if (!localStorage.getItem(this.PRENOTAZIONI_KEY)) {
       localStorage.setItem(this.PRENOTAZIONI_KEY, JSON.stringify([]));
     }
@@ -31,10 +35,11 @@ export class PrenotazioneService {
     }
   }
 
+  // salva nuovo acquisto nel localStorage
   effettuaAcquisto(giocoId: number, importo: number): void {
     const acquisti: Acquisto[] = JSON.parse(localStorage.getItem(this.ACQUISTI_KEY) || '[]');
     const nuovoAcquisto: Acquisto = {
-      id: Date.now(),
+      id: Date.now(), // momento d'acquisto come id
       giocoId,
       data: new Date(),
       importo

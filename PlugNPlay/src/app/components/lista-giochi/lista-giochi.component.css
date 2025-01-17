@@ -34,42 +34,18 @@
   color: #666;
 }
 
-.btn-acquista, .btn-prenota {
-  width: 100%;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: white;
-  margin-top: 10px;
-}
-
-.btn-acquista {
-  background-color: #4CAF50;
-}
-
-.btn-acquista:hover {
-  background-color: #45a049;
-}
-
-.btn-prenota {
-  background-color: #2196F3;
-}
-
-.btn-prenota:hover {
-  background-color: #1976D2;
-}
+/* stile btn spostato in styles.css */
 
 .titolo-gioco {
   cursor: pointer;
-  color: #2196F3;
+  color: #8940ff;
 }
 
 .titolo-gioco:hover {
   text-decoration: underline;
 }
 
-.modal-overlay {
+.modale {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +58,7 @@
   z-index: 1000;
 }
 
-.modal-content {
+.modale-contenuto {
   background: white;
   padding: 20px;
   border-radius: 8px;

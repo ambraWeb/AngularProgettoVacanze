@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: #f8eeff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-acquista, .btn-prenota {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-acquista {
+  background-color: #8940ff;
+}
+
+.btn-acquista:hover {
+  background-color: #7722ff;
+}
+
+.btn-prenota {
+  background-color: #6e94ff;
+}
+
+.btn-prenota:hover {
+  background-color: #3c68e4;
+}

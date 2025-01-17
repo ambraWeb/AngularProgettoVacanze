@@ -11,7 +11,7 @@
           <p><strong>Prezzo:</strong> €{{gioco.prezzo}}</p>
           <p><strong>Stato:</strong> {{gioco.disponibile ? 'Disponibile' : 'Non disponibile'}}</p>
         </div>
-        <button 
+        <button
           [class]="gioco.disponibile ? 'btn-acquista' : 'btn-prenota'"
           (click)="onClick()">
           {{gioco.disponibile ? 'Acquista' : 'Prenota'}}
