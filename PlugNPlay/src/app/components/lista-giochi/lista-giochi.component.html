@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Catalogo Videogiochi</h2>
+  <div class="grid-giochi">
+    @for (gioco of giochi; track gioco.id) {
+      <div class="card-gioco">
+        <div class="info-gioco">
+          <h3>{{gioco.titolo}}</h3>
+          <p>€{{gioco.prezzo}}</p>
+          <div class="stato">
+            @if (gioco.disponibile) {
+              <button class="btn-acquista">Acquista</button>
+            } @else {
+              <button class="btn-prenota" (click)="onClick(gioco)">
+                Prenota
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

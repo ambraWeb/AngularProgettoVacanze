@@ -1,0 +1,24 @@
+<div class="dettaglio-container">
+  @if (gioco) {
+    <div class="gioco-card">
+      <img [src]="gioco.imgCopertina" [alt]="gioco.titolo" class="copertina">
+      <div class="info">
+        <h2>{{gioco.titolo}}</h2>
+        <p class="descrizione">{{gioco.descrizione}}</p>
+        <div class="dettagli">
+          <p><strong>Genere:</strong> {{gioco.genere}}</p>
+          <p><strong>Data di rilascio:</strong> {{gioco.dataRilascio | date:'dd/MM/yyyy'}}</p>
+          <p><strong>Prezzo:</strong> €{{gioco.prezzo}}</p>
+          <p><strong>Stato:</strong> {{gioco.disponibile ? 'Disponibile' : 'Non disponibile'}}</p>
+        </div>
+        <button 
+          [class]="gioco.disponibile ? 'btn-acquista' : 'btn-prenota'"
+          (click)="onClick()">
+          {{gioco.disponibile ? 'Acquista' : 'Prenota'}}
+        </button>
+      </div>
+    </div>
+  } @else {
+    <p>Gioco non trovato</p>
+  }
+</div>
